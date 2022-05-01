@@ -1,0 +1,50 @@
+1)  table name- Student
+     primary key- StdNo
+     other columns-StdAddress, StdCity, StdState, StdZip,StdEmail
+     
+     table Name- Lender
+     Primary Key- LenderNo
+     other Column-LendName
+     
+     table Name-InstID
+     Primary Key-InstName
+     Other Column-InstMascot
+     
+     table Name-Loan
+     Primary Key-LoanNo
+     Other Column-ProdDate, DisbMethod,DisbBank, DateAuth, NoteValue, Subsidized, Rate
+     
+     table Name-DisBurseLine
+     Primary Key-DateSent
+     Other Column-Amount,OrigFee,GuarFee
+     
+     
+     
+2)      1-M relationship
+        Given to
+        Uses
+        Authorizes
+        Sent
+        
+3)     M-N relationship
+         NOne
+         
+         
+         
+4)     Identifying Relationship
+        Given To
+        Sent
+        
+        
+5)     Account
+       
+       Primary key- Acctid
+       Other column -AcctName, Balance
+       
+6)    Owner table
+       Primary key- OwnId
+       other column- OwnName, OwnPhone
+       
+       Property Table
+       Primary Key - PropId
+       Other Column- BidgNmae,UnitNo, Bdrms  

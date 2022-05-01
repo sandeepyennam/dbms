@@ -1,0 +1,50 @@
+Q1:
+   INSERTION ANAMOLY:
+	 It is mandatory to know a visit and an provider because the combination of VisitNoand
+	 ProvNois the primary key.
+	 
+UPDATION ANAMOLY :
+
+	 If we change ProvSpecialtyof ProvNoD2, two rows must be changed.
+
+DELETION ANAMOLY :
+
+	If we delete the provider of D2 in V10021, we lost the information about patient P1and visit V10021
+		
+		
+Q2-    
+	    
+	List of FDs
+	PatNo → PatAge, PatZip
+	PatZip → PatCity
+	VisitNo → PatNo, VisitDate
+	ProvNo→ ProvSpecialty, ProvEmail
+	ProvNo, VisitNo → Diagnosis
+
+	 BCNF tables:
+	PationTable1 (PatNo, PatAge, PatZip)
+	FOREIGN KEY (PatZip) REFERENCES PationTable1­1
+	PationTable1­1 (PatZip, PatCity)
+	PationTable2 (VisitNo, PatNo,VisitDate)
+	FOREIGN KEY (PatNo) REFERENCES PationTable1
+	PationTable3 (ProvNo, ProvEmail, ProvSpecialty)
+	UNIQUE(ProvEmail)
+	PationTable4 (ProvNo, VisitNo,Diagnosis)
+	FOREIGN KEY (ProvNo) REFERENCES PationTable3
+	FOREIGN KEY (VisitNo)REFERENCES PationTable2	
+	
+Q3 -
+	 the Student table:
+	The dependencies between StdNoand StdEmailviolate BCNF. Both StdNoand
+	StdEmailare determinants
+	Student(StdNo, StdName, StdEmail, StdAddress, StdCity, StdState, StdZip )
+	UNIQUE(StdEmail)
+
+	The Institution table:
+	The dependencies between InstNoand InstNameviolate BCN
+	Institution (InstNo, InstName, InstMascot)
+	UNIQUE(InstName)
+
+	The lender table:
+	Lender (LenderNo, LenderName)
+	UNIQUE(LenderName)	
